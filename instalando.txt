@@ -1,0 +1,33 @@
+Instalação do Grunt e seus plugins
+O Grunt funciona com base no Node.js e sua instalação é feita a partir do NPM, conforme mostra a estrutura da Figura 1.
+
+Estrutura de instalação de pacotes ao usar o Grunt
+Figura 1. Estrutura de instalação de pacotes ao usar o Grunt
+O primeiro pacote a ser instalado é o grunt-cli, que é a ferramenta de linha de comando (CLI) do Grunt. 
+Quando a instalamos, passamos a ter disponível no terminal o comando grunt, a partir do qual vamos executar as tarefas de cada projeto. 
+Sendo assim, esse pacote deve ser instalado globalmente, como vemos abaixo, passando o argumento -g.
+
+npm install -g grunt-cli
+
+em cada projeto tem que instalar pacotes locais
+
+npm init -y
+
+cria todos os arquivos padrao (packege.json), executar dentro da pasta de projeto. apos executar ele voce consegue instalar os pacotes
+
+
+O próximo pacote que deve ser instalado é o grunt, que contém de fato as funcionalidades para executar as tarefas. 
+Esse, por sua vez, deve ser instalado localmente em cada projeto e, como boa prática ao usar o NPM, 
+deve ser registrado como dependência de desenvolvimento usando o argumento --save-dev.
+
+Então, acesse a pasta do projeto e execute o seguinte comando:
+
+npm install grunt --save-dev
+
+Feito isso o Grunt já está instalado no projeto, agora precisamos instalar os plugins 
+para executar as tarefas desejadas. 
+Como eles serão usadas também em tempo de desenvolvimento, devemos instalá-los com o argumento --save-dev:
+-cssminéo nome do plugin
+
+npm install grunt-contrib-cssmin --save-dev
+
